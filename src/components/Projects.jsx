@@ -1,6 +1,6 @@
 import { MonitorSmartphone, Brain, LineChart } from 'lucide-react'
 
-function ProjectCard({ title, description, accent, Icon, thumbnail }) {
+function ProjectCard({ title, description, accent, Icon }) {
   return (
     <div className="group relative rounded-2xl border border-slate-200/60 bg-white/70 backdrop-blur-xl p-5 shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl">
       <div className={`absolute inset-0 rounded-2xl ${accent} opacity-0 group-hover:opacity-10 transition-opacity`} />
@@ -10,11 +10,12 @@ function ProjectCard({ title, description, accent, Icon, thumbnail }) {
             <Icon className="h-6 w-6" />
           </div>
         </div>
-        <div className="">
+        <div className="relative">
           <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
           <p className="mt-1 text-sm text-slate-700/80 whitespace-pre-line">{description}</p>
         </div>
       </div>
+      <div className="pointer-events-none absolute left-6 right-6 -bottom-2 h-6 bg-gradient-to-r from-slate-300/10 via-slate-500/10 to-slate-300/10 blur-xl rounded-full" />
     </div>
   )
 }
@@ -31,19 +32,19 @@ export default function Projects() {
             title="MemoSnap"
             Icon={MonitorSmartphone}
             accent="bg-teal-400"
-            description={`A web application that captures and preserves cherished photo memories.\nFeatures intelligent tagging, smooth navigation, and emotional storytelling through design.`}
+            description={`MemoSnap — A smart photo memory web app that captures emotions through AI-powered tagging and intuitive design.`}
           />
           <ProjectCard
             title="Sentient Shopper"
             Icon={Brain}
             accent="bg-blue-500"
-            description={`An AI-powered shopping assistant that understands human emotions and preferences to suggest products intuitively.\nCombines computer vision, recommendation systems, and predictive insights.`}
+            description={`Sentient Shopper — An AI shopping assistant that understands user emotions to make personalized recommendations.`}
           />
           <ProjectCard
             title="StockVision"
             Icon={LineChart}
-            accent="bg-blue-700"
-            description={`A data-driven stock analysis and forecasting tool that visualizes trends with clarity and precision.\nEmpowers users with AI-enhanced predictions and interactive dashboards.`}
+            accent="bg-gradient-to-r from-blue-700 to-emerald-600"
+            description={`StockVision — A data-driven analysis and forecasting platform that visualizes market insights using machine learning.`}
           />
         </div>
       </div>
